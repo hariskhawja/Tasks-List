@@ -13,27 +13,51 @@
 
     <h1>Tasks List</h1>
 
+    <div class="coverPage">
+        <h2>The Ultimate Productivity Tool</h2>
+        <hr>
+        <p>Inspiring Improvement</p>
+    </div>
+
+    <div class="tasksDisplay">
+        <p id="numTasks">0</p>
+        <p id="numTasksDisplay">Tasks</p>
+    </div>
+
     <ul class="taskInputs">
-        <li><input type="text" value="Task" id="task_task"/></li>
+        <p class="heading">Add Task Info</p>
+        <li><input type="text" value="Add Task" id="task_task"/></li>
         <li><input type="number" value="0" id="time_task"/></li>
-        <li><input type="text" value="Section" id="section_task"/></li>
-        <li><button class="submit" onClick="addTask('task_task', 'section_task', 'time_task', 'section1', 'section2', 'section3', 'section4')">Submit</button></li>
+        <li><input type="text" value="Add Section" id="section_task"/></li>
+        <li><button class="submit" onClick="addTask('task_task', 'section_task', 'time_task', 'Section1', 'Section2', 'Section3', 'Section4')">Submit</button></li>
     </ul>
 
+    <hr class="secondHr">
+
     <div class="center">
-        <button id="section1" onClick="openSection('section1', 'output_box')">Section1</button>
-        <button id="section2" onClick="openSection('section2', 'output_box')">Section2</button>
-        <button id="section3" onClick="openSection('section3', 'output_box')">Section3</button>
-        <button id="section4" onClick="openSection('section4', 'output_box')">Section4</button>
+        <button id="Section1" onClick="openSection('Section1', 'output_box')">Section 1</button>
+        <button id="Section2" onClick="openSection('Section2', 'output_box')">Section 2</button>
+        <button id="Section3" onClick="openSection('Section3', 'output_box')">Section 3</button>
+        <button id="Section4" onClick="openSection('Section4', 'output_box')">Section 4</button>
         <p id="output_box"></p>
     </div>
     
     <ul class="timeInputs">
+        <p class="heading">Change Task Duration</p>
         <li><input type="text" value="Task" id="task_time"/></li>
         <li><input type="text" value="Section" id="section_time"/></li>
         <li><button class="plus" onClick="addTime('section_time', 'task_time')">+</button> <button class="minus" onClick="minusTime('section_time', 'task_time')">-</button></li>
     </ul>
 
+    <div class="deletion">
+        <button class="deletionButton" onClick="deleteSection()">Delete Section</button>
+        <button class="deletionButton" onClick="renameSection('rename_section_input')">Rename Section</button>
+        <input type="text" value="Rename" id="rename_section_input"/>
+    </div>
+
+    <footer>
+        <p>By: Haris Khawja & Roy Zhang</p>
+    </footer>
 
 </body>
 </html>

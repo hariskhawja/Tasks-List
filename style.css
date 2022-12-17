@@ -3,6 +3,16 @@
     to {font-size: 25px; width: 250px;}
 }
 
+@keyframes appear {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+@keyframes tasksAppear {
+    from {opacity: 0%; left: 0%;}
+    to {opacity: 100%; left: 70%}
+}
+
 html {
     height: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -13,8 +23,6 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     background-color: white;
-    overflow-y: hidden;
-    background-image: linear-gradient(lightblue, blue);
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
@@ -22,10 +30,76 @@ body {
 }
 
 h1 {
-    text-align: center;
-    font-size: 60px;
+    text-align: left;
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
     background-color: black;
     color: white;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 25px;
+    font-size: 50px;
+    color: white;
+    font-weight: bolder;
+    animation: appear 1s;
+}
+
+.coverPage hr {
+    width: 50%;
+    text-align: left;
+    position: absolute;
+    left: 5%;
+    background-color: darkblue;
+    color: darkblue;
+    height: 2px;
+    border-color: darkblue;
+    border-radius: 10px;
+    animation: appear 3s;
+
+}
+
+.coverPage {
+    background-image: linear-gradient(darkblue, blue);
+    margin-top: 0;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.tasksDisplay {
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    color: white;
+    font-size: 60px;
+    object-fit: contain;
+    border: 5px solid;
+    border-radius: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    animation: tasksAppear 1.5s;
+
+}
+
+#numTasks {
+    margin-bottom: 0;
+}
+
+#numTasksDisplay {
+    margin-top: 0;
+}
+
+.secondHr {
+    height: 1px;
+    background-color: darkblue;
+    margin-top: 30px;
+    width: 75%
 }
 
 ul {
@@ -42,7 +116,7 @@ button {
     padding-top: 5px;
     padding-bottom: 5px;
     width: 150px;
-    background-color: darkred;
+    background-color: darkblue;
     color: white;
     border: 0px solid;
     border-radius: 5px;
@@ -51,17 +125,15 @@ button {
 
 /* top right bottom left */
 
-#section1:hover, #section2:hover, #section3:hover, #section4:hover {
+#Section1:hover, #Section2:hover, #Section3:hover, #Section4:hover {
     animation: enlargen 1s forwards;
-    background-color: rgb(188, 34, 34);
-
+    background-color: blue;
 }
 
 .center {
     margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 25%;
+    margin-left: 25%;
+    margin-top: 50px
 }
 
 input {
@@ -69,18 +141,20 @@ input {
     margin-left: 5px;
     width: 200px;
     border: 0x solid;
-    border-color: green;
+    border-color: darkblue;
+    border-radius: 5px;
 }
 
 .taskInputs {
     position: absolute;
-    left: 0;
+    top: 80%;
 }
 
 .timeInputs {
     position: absolute;
     right: 0;
     margin-right: 40px;
+    top: 80%;
 }
 
 .timeInputs button {
@@ -88,23 +162,61 @@ input {
 }
 
 .plus {
-    background-color: darkgreen;
+    background-color: darkblue;
 }
 
 .minus:hover {
-    background-color: rgb(188, 34, 34);
+    background-color: blue;
+}
+
+.deletionButton:hover {
+    background-color: blue;
 }
 
 .submit {
     width: 210px;
     margin-left: 4px;
-    background-color: darkgreen;
+    background-color: darkblue;
 }
 
 .submit:hover, .plus:hover {
-    background-color: green;
+    background-color: blue;
 }
 
 p {
     text-align: center;
+}
+
+#output_box {
+    position: absolute;
+    left: 50%;
+    font-size: 25px;
+}
+
+.heading {
+    font-size: 20px;
+    border: 3px solid darkblue;
+    background-color: darkblue;
+    color: white;
+    border-radius: 5px;
+}
+
+.deletion {
+    text-align: center;
+    margin: 400px;
+}
+
+.deletion button {
+    font-size: 20px;
+    width: 100px;
+}
+
+.coverPage p {
+    color: white;
+    font-size: 30px;
+    text-align: left;
+    margin-left: 40px;
+    font-weight: bold;
+    margin-top: 75px;
+    animation: appear 4s;
 }
