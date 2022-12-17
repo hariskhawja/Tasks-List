@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="indexHtml">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks List</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h1>Tasks List</h1>
+
+    <ul class="taskInputs">
+        <li><input type="text" value="Task" id="task_task"/></li>
+        <li><input type="number" value="0" id="time_task"/></li>
+        <li><input type="text" value="Section" id="section_task"/></li>
+        <li><button class="submit" onClick="addTask('task_task', 'section_task', 'time_task', 'section1', 'section2', 'section3', 'section4')">Submit</button></li>
+    </ul>
+
+    <div class="center">
+        <button id="section1" onClick="openSection('section1', 'output_box')">Section1</button>
+        <button id="section2" onClick="openSection('section2', 'output_box')">Section2</button>
+        <button id="section3" onClick="openSection('section3', 'output_box')">Section3</button>
+        <button id="section4" onClick="openSection('section4', 'output_box')">Section4</button>
+        <p id="output_box"></p>
+    </div>
+    
+    <ul class="timeInputs">
+        <li><input type="text" value="Task" id="task_time"/></li>
+        <li><input type="text" value="Section" id="section_time"/></li>
+        <li><button class="plus" onClick="addTime('section_time', 'task_time')">+</button> <button class="minus" onClick="minusTime('section_time', 'task_time')">-</button></li>
+    </ul>
+
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+@keyframes enlargen {
+    from {font-size: 20px; width: 150px}
+    to {font-size: 25px; width: 250px;}
+}
+
+html {
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    margin: 0px;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: white;
+    overflow-y: hidden;
+    background-image: linear-gradient(lightblue, blue);
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    background-color: black;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+    background-color: darkred;
+    color: white;
+    border: 0px solid;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* top right bottom left */
+
+#section1:hover, #section2:hover, #section3:hover, #section4:hover {
+    animation: enlargen 1s forwards;
+    background-color: rgb(188, 34, 34);
+
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+input {
+    font-size: 20px;
+    margin-left: 5px;
+    width: 200px;
+    border: 0x solid;
+    border-color: green;
+}
+
+.taskInputs {
+    position: absolute;
+    left: 0;
+}
+
+.timeInputs {
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+}
+
+.timeInputs button {
+    width: 90px;
+}
+
+.plus {
+    background-color: darkgreen;
+}
+
+.minus:hover {
+    background-color: rgb(188, 34, 34);
+}
+
+.submit {
+    width: 210px;
+    margin-left: 4px;
+    background-color: darkgreen;
+}
+
+.submit:hover, .plus:hover {
+    background-color: green;
+}
+
+p {
+    text-align: center;
+}
