@@ -62,19 +62,18 @@ h2 {
     border-color: darkblue;
     border-radius: 10px;
     animation: appear 3s;
-
 }
 
 .coverPage {
     background-image: linear-gradient(darkblue, blue);
     margin-top: 0;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 140px;
 }
 
 .tasksDisplay {
     position: absolute;
-    top: 25%;
+    top: 33%;
     left: 70%;
     color: white;
     font-size: 60px;
@@ -149,14 +148,14 @@ input {
 
 .taskInputs {
     position: absolute;
-    top: 80%;
+    top: 103%;
 }
 
 .timeInputs {
     position: absolute;
     right: 0;
     margin-right: 40px;
-    top: 80%;
+    top: 103%;
 }
 
 .timeInputs button {
@@ -194,6 +193,7 @@ p {
     margin-top: 55px;
     font-size: 25px;
     width: 100%;
+    z-index: -1;
 }
 
 .heading {
@@ -227,4 +227,10 @@ p {
     font-weight: bold;
     margin-top: 75px;
     animation: appear 4s;
+}
+
+#rename_section_input {
+    margin-top: 100px;
+    top: 50%;
+    position: sticky;
 }

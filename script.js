@@ -5,6 +5,7 @@ var num_tasks = 0
 
 
 function addTask(task_id, task_section_id, time_id, section1_id, section2_id, section3_id, section4_id){
+    console.log("addtask")
     const task = document.getElementById(task_id).value
     const section = document.getElementById(task_section_id).value.split(' ')
     const time = document.getElementById(time_id).value
@@ -13,16 +14,18 @@ function addTask(task_id, task_section_id, time_id, section1_id, section2_id, se
         task_section += section[i]
     }
     if (task_section in all_sections){
-        all_sections[task_section].push([task, time])
-        num_tasks ++
-        document.getElementById('numTasks').innerHTML = num_tasks
+        if (all_sections[task_section].length < 8){
+            all_sections[task_section].push([task, time])
+            num_tasks++
+            document.getElementById('numTasks').innerHTML = num_tasks
+        }
     }
 
     else {
         if(Object.keys(all_sections).length < 4){
             all_sections[task_section] = [[task, time]]
             section_id_dict[task_section] = "Section" + section_counter
-            section_counter ++ 
+            section_counter++ 
 
             var count = 0
             for (let section in all_sections) {
@@ -39,9 +42,10 @@ function addTask(task_id, task_section_id, time_id, section1_id, section2_id, se
                     document.getElementById(section4_id).innerHTML = section
                 }
                 count ++ 
-                num_tasks ++
-                document.getElementById('numTasks').innerHTML = num_tasks
             }
+            num_tasks ++
+            console.log(num_tasks)
+            document.getElementById('numTasks').innerHTML = num_tasks
         }
         else {
             return false
