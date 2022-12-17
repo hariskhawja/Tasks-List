@@ -132,8 +132,10 @@ button {
 
 .center {
     margin: 0;
-    margin-left: 25%;
-    margin-top: 50px
+    position: absolute;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
 }
 
 input {
@@ -189,9 +191,9 @@ p {
 
 #output_box {
     position: absolute;
-    left: 45%;
-    text-align: center;
+    margin-top: 55px;
     font-size: 25px;
+    width: 100%;
 }
 
 .heading {
@@ -204,12 +206,17 @@ p {
 
 .deletion {
     text-align: center;
-    margin: 400px;
+    margin-top: 400px;
+    margin-bottom: 30px;
 }
 
 .deletion button {
     font-size: 20px;
     width: 100px;
+}
+
+.footer {
+    padding-bottom: 25px;
 }
 
 .coverPage p {
